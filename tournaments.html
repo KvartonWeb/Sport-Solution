@@ -1,0 +1,95 @@
+<!-- tournaments.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tournaments — Sport Solution</title>
+  <meta name="description" content="Upcoming youth football tournaments and friendly matches in Georgia." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/favicon-round.png" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html">
+        <img class="brand__mark brand__logo" src="images/logo-icon.webp" alt="" aria-hidden="true" />
+        <span class="brand__text">
+          <strong>Sport</strong> <span>Solution</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="tournaments.html">Tournaments</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="contact.html" class="btn btn--sm btn--outline">Contact</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section__head">
+        <h2>Tournaments & Matches</h2>
+        <p>Upcoming events and examples of programs we can organize for your club.</p>
+      </div>
+
+      <div class="cards" id="tournamentCards"></div>
+
+      <div class="section" style="padding-top:24px">
+        <div class="card">
+          <h3 style="margin-top:0">Want a custom tournament week?</h3>
+          <p style="color:var(--muted);font-weight:650;margin:8px 0 14px">
+            Tell us your age group, level and preferred month — we’ll build a schedule with opponents, venues and logistics.
+          </p>
+          <a class="btn" href="contact.html">Request a proposal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="index.html">
+          <img class="brand__mark brand__logo" src="images/logo-icon.webp" alt="" />
+          <span class="brand__text"><strong>Sport</strong> <span>Solution</span></span>
+        </a>
+        <p class="muted">
+          Bringing international youth football clubs to Georgia — tournaments, friendlies,
+          camps and cultural experiences.
+        </p>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="tournaments.html">Tournaments</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <a href="contact.html">Get in touch</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html" id="backToTop">Back to top ↑</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Sport Solution. All rights reserved.</span>
+      <span class="muted">Made for youth football travel in Georgia.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
