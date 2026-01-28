@@ -111,4 +111,69 @@
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  // Scroll animations with repeat on scroll back
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.15
+  };
+
+  const animateOnScroll = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+      } else {
+        // Remove animated class when element leaves viewport
+        // This allows animations to re-trigger when scrolling back
+        entry.target.classList.remove('animated');
+      }
+    });
+  }, observerOptions);
+
+  // Add animation classes to elements
+  const elementsToAnimate = [
+    { selector: '#services .section__head', delay: 0 },
+    { selector: '#services .features .feature', delay: 100, stagger: true },
+    { selector: '#about .about__text', delay: 0 },
+    { selector: '#about .about__media', delay: 200 },
+    { selector: '#tournaments .section__head', delay: 0 },
+    { selector: '#tournaments .tcard', delay: 100, stagger: true },
+    { selector: '.cta__inner', delay: 0 },
+    { selector: '#faq .section__head', delay: 0 },
+    { selector: '#faq .faq details', delay: 50, stagger: true },
+    { selector: '#contact .contact__left', delay: 0 },
+    { selector: '#contact .contact__right', delay: 200 }
+  ];
+
+  elementsToAnimate.forEach(item => {
+    const elements = document.querySelectorAll(item.selector);
+    elements.forEach((el, index) => {
+      el.classList.add('animate-on-scroll');
+      const delay = item.stagger ? item.delay * index : item.delay;
+      el.style.transitionDelay = `${delay}ms`;
+      animateOnScroll.observe(el);
+    });
+  });
+
+  // Add floating animation to the hero card (if visible)
+  const heroCard = document.querySelector('.hero__card');
+  if (heroCard && window.innerWidth > 980) {
+    heroCard.style.animation = 'float 6s ease-in-out infinite';
+  }
+
+
+  // Add stagger animation to tournament cards after they're rendered
+  setTimeout(() => {
+    const tcards = document.querySelectorAll('.tcard');
+    tcards.forEach((card, index) => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      setTimeout(() => {
+        card.style.transition = 'all 0.6s ease';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, 100 * index);
+    });
+  }, 100);
 })();
