@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Sport Solution</title>
+  <meta name="description" content="Blog post about youth football tours, tournaments and matches in Georgia." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/favicon-round.png" />
+</head>
+<body>
+
+  <!-- Header (same as other pages) -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html">
+        <img class="brand__mark brand__logo" src="images/logo-icon.webp" alt="" aria-hidden="true" />
+        <span class="brand__text">
+          <strong>Sport</strong> <span>Solution</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="tournaments.html">Tournaments</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="contact.html" class="btn btn--sm btn--outline">Contact</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Blog hero -->
+  <section class="blog-hero">
+    <div class="blog-hero__bg" aria-hidden="true"></div>
+    <div class="container blog-hero__inner">
+      <a class="blog-back" href="index.html">← Back to home</a>
+
+      <div class="blog-meta">
+        <span class="pill">Blog</span>
+        <span class="blog-dot">•</span>
+        <time id="postDate" datetime="2026-01-28">Jan 28, 2026</time>
+        <span class="blog-dot">•</span>
+        <span id="readTime">5 min read</span>
+      </div>
+
+      <h1 id="postTitle">How to Plan a Youth Football Trip to Georgia</h1>
+      <p id="postExcerpt" class="lead">
+        A practical checklist for coaches: opponents, schedule, accommodation, transport,
+        and cultural experience — all packed into a smooth 4–7 day program.
+      </p>
+
+      <div class="blog-author">
+        <div class="blog-author__avatar" aria-hidden="true"></div>
+        <div class="blog-author__info">
+          <strong id="postAuthor">Sport Solution Team</strong>
+          <span class="muted">Youth football tours & matches in Georgia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <main class="section">
+    <div class="container blog-layout">
+
+      <article class="card blog-article">
+        <figure class="blog-cover">
+          <img id="postImage" src="images/blogs/1.jpg" alt="Youth football match in Georgia" />
+        </figure>
+
+        <div id="postContent" class="blog-content">
+          <h2>1) Define your goals</h2>
+          <p>
+            First decide what your team needs most: competitive matches, tournament experience,
+            training camp, or team bonding. The goal determines the schedule and opponent level.
+          </p>
+
+          <h2>2) Pick the best dates</h2>
+          <p>
+            Most clubs choose <strong>4–7 days</strong>. It’s enough time for 2–4 matches plus
+            1–3 training sessions and recovery. We recommend arriving one day before the first match.
+          </p>
+
+          <div class="blog-callout">
+            <strong>Tip:</strong> Choose a month based on weather and school calendar.
+            Spring and early autumn are especially comfortable.
+          </div>
+
+          <h2>3) Organize matches & referees</h2>
+          <ul>
+            <li>Opponents by age group and level</li>
+            <li>Referees and field booking</li>
+            <li>Safe match rules and scheduling</li>
+          </ul>
+
+          <h2>4) Logistics that matter</h2>
+          <p>
+            Transport and meals are the easiest places to lose time and energy.
+            Make sure your plan includes airport pickup, team bus, athlete-friendly meals,
+            and enough rest between matches.
+          </p>
+
+          <h2>5) Add a cultural day</h2>
+          <p>
+            A trip becomes unforgettable when you mix football with a cultural experience.
+            Tbilisi city tour, mountains (Kazbegi) or seaside (Batumi) are popular options.
+          </p>
+
+          <hr />
+
+          <p class="blog-end">
+            Want us to build a full plan for your club? Send your dates, age group and number of players —
+            we’ll reply with a proposal.
+          </p>
+
+          <a class="btn" href="contact.html">Request a proposal</a>
+        </div>
+      </article>
+
+      <aside class="blog-aside">
+        <div class="card blog-box">
+          <h3>Share</h3>
+          <div class="blog-share">
+            <button class="share-btn" type="button" data-share="copy">Copy link</button>
+            <button class="share-btn" type="button" data-share="facebook">Facebook</button>
+            <button class="share-btn" type="button" data-share="whatsapp">WhatsApp</button>
+          </div>
+          <p class="form__note" id="shareNote"></p>
+        </div>
+
+        <div class="card blog-box">
+          <h3>Tags</h3>
+          <div class="blog-tags" id="postTags">
+            <a href="#" class="blog-tag">Youth Football</a>
+            <a href="#" class="blog-tag">Georgia</a>
+            <a href="#" class="blog-tag">Tournaments</a>
+          </div>
+        </div>
+
+        <div class="card blog-box">
+          <h3>Contact</h3>
+          <p class="muted" style="margin:0 0 12px">Tell us your age group and preferred month.</p>
+          <a class="btn btn--block" href="contact.html">Contact us</a>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Related posts -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section__head">
+        <h2>Related posts</h2>
+        <p>More about tournaments, friendlies, and youth football trips in Georgia.</p>
+      </div>
+
+      <div class="cards" id="relatedPosts"></div>
+    </div>
+  </section>
+
+  <!-- Footer (same style) -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="index.html">
+          <img class="brand__mark brand__logo" src="images/logo-icon.webp" alt="" />
+          <span class="brand__text"><strong>Sport</strong> <span>Solution</span></span>
+        </a>
+        <p class="muted">
+          Bringing international youth football clubs to Georgia — tournaments, friendlies,
+          camps and cultural experiences.
+        </p>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="tournaments.html">Tournaments</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <a href="contact.html">Get in touch</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html" id="backToTop">Back to top ↑</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Sport Solution. All rights reserved.</span>
+      <span class="muted">Made for youth football travel in Georgia.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
